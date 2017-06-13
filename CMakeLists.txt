@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.1)
 
 add_library(nicehash-api-cpp INTERFACE)
 target_sources(nicehash-api-cpp INTERFACE ${CMAKE_SOURCE_DIR}/include/nicehash-api.hpp)
