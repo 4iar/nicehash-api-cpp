@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 3.1)
 
 add_library(nicehash-api-cpp INTERFACE)
-target_sources(nicehash-api-cpp INTERFACE ${CMAKE_SOURCE_DIR}/include/nicehash-api.hpp)
+file(GLOB nicehash-api-cpp-sources
+        ${CMAKE_SOURCE_DIR}/include/*.hpp
+        ${CMAKE_SOURCE_DIR}/include/client/*.hpp
+        ${CMAKE_SOURCE_DIR}/include/nicehash-api/*.hpp
+        )
+target_sources(nicehash-api-cpp INTERFACE ${nicehash-api-cpp-sources})
 target_include_directories(nicehash-api-cpp INTERFACE include/)
 
 
@@ -42,7 +47,9 @@ endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
 enable_testing()
-add_executable(nicehash-api-cpp_test ${PROJECT_SOURCE_DIR}/test/nicehash-api.test.cpp)
-target_link_libraries(nicehash-api-cpp_test gtest_main)
+
+file(GLOB test-src ${PROJECT_SOURCE_DIR}/test/*.test.cpp ${PROJECT_SOURCE_DIR}/test/nicehash-api/*.test.cpp)
+add_executable(nicehash-api-cpp_test ${test-src})
+target_link_libraries(nicehash-api-cpp_test gtest_main gmock_main nicehash-api-cpp)
 
 add_test(NAME tests COMMAND nicehash-api-cpp_test)
