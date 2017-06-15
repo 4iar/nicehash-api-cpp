@@ -5,6 +5,28 @@
 #include "nicehash-api.hpp"
 
 
-TEST(sample_test_case, sample_test) {
-    EXPECT_EQ(1, 1);
+using ::testing::AtLeast;
+
+
+class GetApiVersionTest : public ::testing::Test {
+public:
+    MockClient* client;
+    NiceHashApi niceHashApi;
+
+    void SetUp() {
+        this->client = new MockClient;
+        niceHashApi = NiceHashApi(this->client);
+    }
+
+    void TearDown() {
+        delete(this->client);
+    }
+};
+
+TEST_F(GetApiVersionTest, GetsTheApiVersion) {
+    std::string url = "https://api.nicehash.com/api";
+    EXPECT_CALL(*client, get(url))
+            .Times(1);
+
+    niceHashApi.getApiVersion();
 }

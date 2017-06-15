@@ -1,14 +1,12 @@
 cmake_minimum_required(VERSION 3.1)
 
-add_library(nicehash-api-cpp INTERFACE)
 file(GLOB nicehash-api-cpp-sources
-        ${CMAKE_SOURCE_DIR}/include/*.hpp
-        ${CMAKE_SOURCE_DIR}/include/client/*.hpp
-        ${CMAKE_SOURCE_DIR}/include/nicehash-api/*.hpp
+        ${PROJECT_SOURCE_DIR}/src/client/*.cpp
+        ${PROJECT_SOURCE_DIR}/src/nicehash-api/*.cpp
         )
+add_library(nicehash-api-cpp STATIC ${nicehash-api-cpp-sources})
 target_sources(nicehash-api-cpp INTERFACE ${nicehash-api-cpp-sources})
-target_include_directories(nicehash-api-cpp INTERFACE include/)
-
+target_include_directories(nicehash-api-cpp INTERFACE ${PROJECT_SOURCE_DIR}/include)
 
 #-------------------
 # Tests
@@ -50,6 +48,6 @@ enable_testing()
 
 file(GLOB test-src ${PROJECT_SOURCE_DIR}/test/*.test.cpp ${PROJECT_SOURCE_DIR}/test/nicehash-api/*.test.cpp)
 add_executable(nicehash-api-cpp_test ${test-src})
-target_link_libraries(nicehash-api-cpp_test gtest_main gmock_main nicehash-api-cpp)
+target_link_libraries(nicehash-api-cpp_test gtest_main gmock_main gmock nicehash-api-cpp)
 
 add_test(NAME tests COMMAND nicehash-api-cpp_test)

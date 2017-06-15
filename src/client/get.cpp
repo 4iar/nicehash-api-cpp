@@ -1,8 +1,6 @@
-#pragma once
-
 #include <string>
 
-#include "client.hpp"
+#include "../../include/client.hpp"
 
 
 /**
@@ -13,4 +11,7 @@
  */
 std::string Client::get (std::string const url) {
     // Perform GET request on url
+    std::string r = "lkajsdlkj";
+
+    return r;
 }

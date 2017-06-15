@@ -1,6 +1,8 @@
+#pragma once
+
 #include <string>
 
-#include "client/client.hpp"
+#include <client.hpp>
 
 
 class MockClient : public Client {
