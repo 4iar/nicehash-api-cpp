@@ -10,9 +10,7 @@
  *
  */
 std::string NiceHashApi::getApiVersion () {
+    std::string response = this->client->get("https://api.nicehash.com/api");
 
-    this->client->get("https://api.nicehash.com/api");
-
-    std::string response = "placeholder";
     return response;
 }
