@@ -8,6 +8,7 @@
 class NiceHashApi {
 private:
     Client* client;
+    void throwExceptionIfAlgorithmInvalid (int algorithm_id);
 public:
     // Global
     std::string getCurrentGlobalStats ();
