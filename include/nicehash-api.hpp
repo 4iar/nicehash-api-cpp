@@ -16,7 +16,7 @@ public:
     // Provider
     std::string getProviderStats (std::string address);
     std::string getDetailedProviderStats (std::string address);
-    std::string getProviderWorkers ();
+    std::string getProviderWorkerStats (std::string address, int algorithm_id);
 
     // Orders
     std::string getAlgorithmOrders ();
