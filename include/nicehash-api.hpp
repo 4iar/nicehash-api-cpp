@@ -15,7 +15,7 @@ public:
 
     // Provider
     std::string getProviderStats (std::string address);
-    std::string getDetailedProviderStats ();
+    std::string getDetailedProviderStats (std::string address);
     std::string getProviderWorkers ();
 
     // Orders
