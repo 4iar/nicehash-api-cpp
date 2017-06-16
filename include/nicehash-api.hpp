@@ -9,6 +9,7 @@ class NiceHashApi {
 private:
     Client* client;
     void throwExceptionIfAlgorithmInvalid (int algorithm_id);
+    void throwExceptionIfLocationInvalid (int location_id);
 public:
     // Global
     std::string getCurrentGlobalStats ();
@@ -20,7 +21,7 @@ public:
     std::string getProviderWorkerStats (std::string address, int algorithm_id);
 
     // Orders
-    std::string getAlgorithmOrders ();
+    std::string getOrdersByAlgorithm (int algorithm_id, int location_id);
     std::string getMultiAlgorithmInfo ();
     std::string getSimpleMultiAlgorithmInfo ();
 
