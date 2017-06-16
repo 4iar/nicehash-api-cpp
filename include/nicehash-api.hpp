@@ -14,7 +14,7 @@ public:
     std::string getAverageGlobalStats ();
 
     // Provider
-    std::string getProviderStats ();
+    std::string getProviderStats (std::string address);
     std::string getDetailedProviderStats ();
     std::string getProviderWorkers ();
 
