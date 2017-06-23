@@ -9,6 +9,11 @@ add_library(nicehash-api-cpp STATIC ${nicehash-api-cpp-sources})
 target_sources(nicehash-api-cpp PUBLIC ${nicehash-api-cpp-sources})
 target_include_directories(nicehash-api-cpp PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
+find_package(CURL REQUIRED)
+include_directories(${CURL_INCLUDE_DIRS})
+
+target_link_libraries(nicehash-api-cpp curl)
+
 #-------------------
 # Tests
 #-------------------
@@ -44,8 +49,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
     include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-
-# Now simply link against gtest or gtest_main as needed. Eg
 enable_testing()
 
 file(GLOB test-src ${PROJECT_SOURCE_DIR}/test/*.test.cpp ${PROJECT_SOURCE_DIR}/test/nicehash-api/*.test.cpp)
