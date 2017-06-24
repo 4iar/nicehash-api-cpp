@@ -1,3 +1,7 @@
+<p align="center">
+<img width="250" src="https://raw.githubusercontent.com/4iar/nicehash-api-cpp/assets/logo.jpg">
+</p>
+
 # Nicehash API wrapper (C++)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
