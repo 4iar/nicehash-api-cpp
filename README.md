@@ -3,9 +3,46 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/4iar/nicehash-api-cpp.svg?branch=master)](https://travis-ci.org/4iar/nicehash-api-cpp)
 
-## Installation
+A C++ API wrapper for the [NiceHash](https://www.nicehash.com/) cloud cryptomining service.
+
+## Requirements
+
+- cURL libs (e.g. Fedora: libcurl-devel, Ubuntu/Debian: libcurl-dev)
+
+- CMake >= 3.1
+
+## Setup
+
+See example CMakeLists.txt in the [examples/](https://github.com/4iar/nicehash-api-cpp/tree/master/examples) folder that uses
+[ExternalProject](https://cmake.org/cmake/help/v3.2/module/ExternalProject.html) to integrate nicehash-api-cpp with an existing CMake project.
+
+Alternatively, manually build the library as below, then link libnicehash-api-cpp.so.
+
+```bash
+git clone https://github.com/4iar/nicehash-api-cpp.git && cd nicehash-api-cpp
+mkdir build && cd build
+cmake ..
+make
+```
+
 
 ## Usage
+
+
+
+```cpp
+#include <nicehash-api.hpp>
+
+...
+
+    // Initialise client
+    NiceHashApi niceHashApi;
+
+    // Run a query
+    // (see docs below for all API functions)
+    std::string algorithm_name = "equihash";
+    std::string stats = niceHashApi.getOrdersByAlgorithm(algorithm_name, 0)
+```
 
 ## API
 
