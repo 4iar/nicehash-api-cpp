@@ -5,14 +5,14 @@ file(GLOB nicehash-api-cpp-sources
         ${PROJECT_SOURCE_DIR}/src/client/*.cpp
         ${PROJECT_SOURCE_DIR}/src/nicehash-api/*.cpp
         )
-add_library(nicehash-api-cpp STATIC ${nicehash-api-cpp-sources})
+add_library(nicehash-api-cpp SHARED ${nicehash-api-cpp-sources})
 target_sources(nicehash-api-cpp PUBLIC ${nicehash-api-cpp-sources})
 target_include_directories(nicehash-api-cpp PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 find_package(CURL REQUIRED)
 include_directories(${CURL_INCLUDE_DIRS})
 
-target_link_libraries(nicehash-api-cpp curl)
+target_link_libraries(nicehash-api-cpp ${CURL_LIBRARIES})
 
 #-------------------
 # Tests
