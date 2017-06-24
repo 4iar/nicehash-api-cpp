@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.1)
 include(ExternalProject)
 ExternalProject_Add(nicehash-api-cpp
   GIT_REPOSITORY    https://github.com/4iar/nicehash-api-cpp.git
-  GIT_TAG           testing
+  GIT_TAG           master
   SOURCE_DIR        "${CMAKE_BINARY_DIR}/nicehash-src"
   BINARY_DIR        "${CMAKE_BINARY_DIR}/nicehash-build"
 )
