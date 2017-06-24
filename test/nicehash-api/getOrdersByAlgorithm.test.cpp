@@ -25,7 +25,7 @@ public:
     }
 };
 
-TEST_F(GetOrdersById, GetsOrdersByTheAlgorithmAndLocationId) {
+TEST_F(GetOrdersById, GetsOrdersByTheAlgorithmIdAndLocationId) {
     // Location id 0
     std::string url = "https://api.nicehash.com/api?method=orders.get&location=0&algo=3";
     std::string response_expected = "{\"result\":{\"orders\":[{\"type\":0,\"id\":5877,\"price\":\"0.0505\",\"algo\":1,\"alive\":true,\"limit_speed\":\"1.0\",\"workers\":0,\"accepted_speed\":0.0}]},\"method\":\"orders.get\"}";
@@ -44,6 +44,28 @@ TEST_F(GetOrdersById, GetsOrdersByTheAlgorithmAndLocationId) {
     EXPECT_CALL(*client, get(url))
             .WillOnce(Return(response_expected));
     response_actual = niceHashApi.getOrdersByAlgorithm(algorithm_id, location_id);
+    EXPECT_EQ(response_actual, response_expected);
+}
+
+TEST_F(GetOrdersById, GetsOrdersByTheAlgorithmNameAndLocationId) {
+    // Location id 0
+    std::string url = "https://api.nicehash.com/api?method=orders.get&location=0&algo=3";
+    std::string response_expected = "{\"result\":{\"orders\":[{\"type\":0,\"id\":5877,\"price\":\"0.0505\",\"algo\":1,\"alive\":true,\"limit_speed\":\"1.0\",\"workers\":0,\"accepted_speed\":0.0}]},\"method\":\"orders.get\"}";
+    std::string algorithm_name = "x11";
+    int location_id = 0;
+
+    EXPECT_CALL(*client, get(url))
+            .WillOnce(Return(response_expected));
+    std::string response_actual = niceHashApi.getOrdersByAlgorithm(algorithm_name, location_id);
+    EXPECT_EQ(response_actual, response_expected);
+
+    // Location id 1
+    url = "https://api.nicehash.com/api?method=orders.get&location=1&algo=3";
+    location_id = 1;
+
+    EXPECT_CALL(*client, get(url))
+            .WillOnce(Return(response_expected));
+    response_actual = niceHashApi.getOrdersByAlgorithm(algorithm_name, location_id);
     EXPECT_EQ(response_actual, response_expected);
 }
 

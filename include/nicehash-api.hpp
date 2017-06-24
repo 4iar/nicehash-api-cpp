@@ -19,9 +19,11 @@ public:
     std::string getProviderStats (std::string address);
     std::string getDetailedProviderStats (std::string address);
     std::string getProviderWorkerStats (std::string address, int algorithm_id);
+    std::string getProviderWorkerStats (std::string address, std::string algorithm_name);
 
     // Orders
     std::string getOrdersByAlgorithm (int algorithm_id, int location_id);
+    std::string getOrdersByAlgorithm (std::string algorithm_name, int location_id);
     std::string getMultiAlgorithmInfo ();
     std::string getSimpleMultiAlgorithmInfo ();
 

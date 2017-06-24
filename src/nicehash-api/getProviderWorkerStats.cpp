@@ -4,7 +4,7 @@
 
 
 /**
- * \brief Get detailed stats for a provider's workers
+ * \brief Get detailed stats for a provider's workers by algorithm id
  *
  * Get current stats for provider for all algorithms (data refreshed every 30 seconds).
  * It (GET) requests https://api.nicehash.com/api?method=stats.provider&addr=...
@@ -23,4 +23,19 @@ std::string NiceHashApi::getProviderWorkerStats (std::string address, int algori
     std::string response = this->client->get(url);
 
     return response;
+}
+/**
+ * \brief Get detailed stats for a provider's workers by algorithm name
+ *
+ * Get current stats for provider for all algorithms (data refreshed every 30 seconds).
+ * It (GET) requests https://api.nicehash.com/api?method=stats.provider&addr=...
+ * where the addr param is a wallet address.
+ * The past 56 payments are also returned in the response.
+ *
+ */
+std::string NiceHashApi::getProviderWorkerStats (std::string address, std::string algorithm_name){
+
+    int algorithm_id = this->algorithmNameToId(algorithm_name);
+
+    return this->getProviderWorkerStats(address, algorithm_id);
 }

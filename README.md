@@ -47,7 +47,11 @@ Get detailed stats for provider for all algorithms including history data and pa
 
 Get detailed stats for provider's workers (rigs).
 
-`niceHashApi.getProviderWorkerStats (std::string address)`
+`niceHashApi.getProviderWorkerStats (std::string address, int algorithm_id)`
+
+or
+
+`niceHashApi.getProviderWorkerStats (std::string address, std::string algorithm_name)`
 
 #### Orders
 
@@ -56,6 +60,10 @@ Get detailed stats for provider's workers (rigs).
 Get all orders for certain algorithm. Refreshed every 30 seconds.
 
 `niceHashApi.getOrdersByAlgorithm (int algorithm_id, int location_id)`
+
+or
+
+`niceHashApi.getOrdersByAlgorithm (std::string algorithm_name, int location_id)`
 
 #### Algorithms
 
