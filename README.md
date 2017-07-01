@@ -6,6 +6,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/4iar/nicehash-api-cpp.svg?branch=master)](https://travis-ci.org/4iar/nicehash-api-cpp)
+[![Docs](https://img.shields.io/badge/docs-doxygen-blue.svg)](https://4iar.github.io/nicehash-api-cpp/)
+
 
 A C++ API wrapper for the [NiceHash](https://www.nicehash.com/) cloud cryptomining service.
 
@@ -29,6 +31,11 @@ cmake ..
 make
 ```
 
+Offline documentation can be built using doxygen
+
+```bash
+make doc
+```
 
 ## Usage
 
