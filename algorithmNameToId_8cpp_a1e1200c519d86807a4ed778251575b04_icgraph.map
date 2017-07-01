@@ -1,0 +1,5 @@
+<map id="strToUpper" name="strToUpper">
+<area shape="rect" id="node2" href="$classNiceHashApi.html#abaa8b2852ddaf91503949b3bf7b1c94e" title="Convert an algorithm name to its id. " alt="" coords="140,46,361,73"/>
+<area shape="rect" id="node3" href="$classNiceHashApi.html#aceafda7f234d706183d2f8aced09642d" title="Get all orders for a given algorithm by name. " alt="" coords="409,5,589,47"/>
+<area shape="rect" id="node4" href="$classNiceHashApi.html#aa991c34b2d2b66c6d2fbd390e34cf58c" title="Get detailed stats for a provider&#39;s workers by algorithm name. " alt="" coords="413,71,586,112"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="WriteCallback" name="WriteCallback">
+<area shape="rect" id="node2" href="$classClient.html#a3603f0196f11c9a675ed9812487d5a63" title="GET request the provided url and return the response body as a string. " alt="" coords="157,195,240,221"/>
+<area shape="rect" id="node3" href="$classNiceHashApi.html#a484c9564d7e6bfbdb11660d14d52a2c0" title="Get API version. " alt="" coords="299,5,487,32"/>
+<area shape="rect" id="node4" href="$classNiceHashApi.html#aad59dbb0ee392bb6e3ebe9faac5c5585" title="Get average (24h) global stats. " alt="" coords="288,57,499,98"/>
+<area shape="rect" id="node5" href="$classNiceHashApi.html#af3658d1d968e014d8db56f980b26e322" title="Get current global stats. " alt="" coords="291,122,496,163"/>
+<area shape="rect" id="node6" href="$classNiceHashApi.html#a9e62eb21a0ee5927760b4b69c600b0af" title="Get detailed current stats for provider for all algorithms. " alt="" coords="307,187,480,229"/>
+<area shape="rect" id="node7" href="$classNiceHashApi.html#a351c8c49d65aa3bfec9f791fab61d0dc" title="Get all orders for a given algorithm id. " alt="" coords="303,253,483,294"/>
+<area shape="rect" id="node9" href="$classNiceHashApi.html#a230aa00b8f54f908765665ba3d42dedc" title="Get current stats for provider for all algorithms. " alt="" coords="307,318,480,359"/>
+<area shape="rect" id="node10" href="$classNiceHashApi.html#a080715e168207776178ae7d7e1da6893" title="Get detailed stats for a provider&#39;s workers by algorithm id. " alt="" coords="307,383,480,425"/>
+<area shape="rect" id="node8" href="$classNiceHashApi.html#aceafda7f234d706183d2f8aced09642d" title="Get all orders for a given algorithm by name. " alt="" coords="547,253,727,294"/>
+<area shape="rect" id="node11" href="$classNiceHashApi.html#aa991c34b2d2b66c6d2fbd390e34cf58c" title="Get detailed stats for a provider&#39;s workers by algorithm name. " alt="" coords="550,383,723,425"/>
+</map>

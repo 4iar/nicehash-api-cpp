@@ -1,0 +1,7 @@
+<map id="NiceHashApi::getOrdersByAlgorithm" name="NiceHashApi::getOrdersByAlgorithm">
+<area shape="rect" id="node2" href="$classNiceHashApi.html#abaa8b2852ddaf91503949b3bf7b1c94e" title="Convert an algorithm name to its id. " alt="" coords="233,5,455,32"/>
+<area shape="rect" id="node4" href="$classNiceHashApi.html#a351c8c49d65aa3bfec9f791fab61d0dc" title="Get all orders for a given algorithm id. " alt="" coords="254,57,434,98"/>
+<area shape="rect" id="node3" href="$algorithmNameToId_8cpp.html#a1e1200c519d86807a4ed778251575b04" title="strToUpper" alt="" coords="503,5,589,32"/>
+<area shape="rect" id="node5" href="$classClient.html#a3603f0196f11c9a675ed9812487d5a63" title="GET request the provided url and return the response body as a string. " alt="" coords="505,64,587,91"/>
+<area shape="rect" id="node6" href="$get_8cpp.html#ab54064eb3c1650bc846b7731da4b07b1" title="WriteCallback" alt="" coords="637,64,741,91"/>
+</map>

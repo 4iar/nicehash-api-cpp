@@ -1,0 +1,12 @@
+<map id="nicehash&#45;api.hpp" name="nicehash&#45;api.hpp">
+<area shape="rect" id="node2" href="$algorithmNameToId_8cpp.html" title="algorithmNameToId.cpp" alt="" coords="5,87,167,114"/>
+<area shape="rect" id="node3" href="$getApiVersion_8cpp.html" title="getApiVersion.cpp" alt="" coords="191,87,319,114"/>
+<area shape="rect" id="node4" href="$getAverageGlobalStats_8cpp.html" title="getAverageGlobalStats.cpp" alt="" coords="343,87,525,114"/>
+<area shape="rect" id="node5" href="$getCurrentGlobalStats_8cpp.html" title="getCurrentGlobalStats.cpp" alt="" coords="549,87,725,114"/>
+<area shape="rect" id="node6" href="$getDetailedProviderStats_8cpp.html" title="getDetailedProviderStats.cpp" alt="" coords="749,87,941,114"/>
+<area shape="rect" id="node7" href="$getOrdersByAlgorithm_8cpp.html" title="getOrdersByAlgorithm.cpp" alt="" coords="965,87,1140,114"/>
+<area shape="rect" id="node8" href="$getProviderStats_8cpp.html" title="getProviderStats.cpp" alt="" coords="1165,87,1309,114"/>
+<area shape="rect" id="node9" href="$getProviderWorkerStats_8cpp.html" title="getProviderWorkerStats.cpp" alt="" coords="1333,87,1519,114"/>
+<area shape="rect" id="node10" href="$throwExceptionIfAlgorithmInvalid_8cpp.html" title="throwExceptionIfAlgorithm\lInvalid.cpp" alt="" coords="1544,80,1719,121"/>
+<area shape="rect" id="node11" href="$throwExceptionIfLocationInvalid_8cpp.html" title="throwExceptionIfLocation\lInvalid.cpp" alt="" coords="1743,80,1912,121"/>
+</map>

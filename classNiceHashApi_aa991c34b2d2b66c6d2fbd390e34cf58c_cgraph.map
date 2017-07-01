@@ -1,0 +1,7 @@
+<map id="NiceHashApi::getProviderWorkerStats" name="NiceHashApi::getProviderWorkerStats">
+<area shape="rect" id="node2" href="$classNiceHashApi.html#abaa8b2852ddaf91503949b3bf7b1c94e" title="Convert an algorithm name to its id. " alt="" coords="227,5,448,32"/>
+<area shape="rect" id="node4" href="$classNiceHashApi.html#a080715e168207776178ae7d7e1da6893" title="Get detailed stats for a provider&#39;s workers by algorithm id. " alt="" coords="251,57,424,98"/>
+<area shape="rect" id="node3" href="$algorithmNameToId_8cpp.html#a1e1200c519d86807a4ed778251575b04" title="strToUpper" alt="" coords="496,5,583,32"/>
+<area shape="rect" id="node5" href="$classClient.html#a3603f0196f11c9a675ed9812487d5a63" title="GET request the provided url and return the response body as a string. " alt="" coords="498,64,581,91"/>
+<area shape="rect" id="node6" href="$get_8cpp.html#ab54064eb3c1650bc846b7731da4b07b1" title="WriteCallback" alt="" coords="631,64,735,91"/>
+</map>
