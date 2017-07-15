@@ -11,16 +11,12 @@ using ::testing::Return;
 
 class GetCurrentGlobalStats : public ::testing::Test {
 public:
-    MockClient* client;
+    std::shared_ptr<MockClient> client;
     NiceHashApi niceHashApi;
 
     void SetUp() {
-        this->client = new MockClient;
+        this->client = std::shared_ptr<MockClient>(new MockClient);
         niceHashApi = NiceHashApi(this->client);
-    }
-
-    void TearDown() {
-        delete(this->client);
     }
 };
 

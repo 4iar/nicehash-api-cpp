@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
+#include <memory>
 
 #include "../mocks/client.mock.hpp"
 #include "nicehash-api.hpp"
@@ -11,16 +12,12 @@ using ::testing::Return;
 
 class GetApiVersionTest : public ::testing::Test {
 public:
-    MockClient* client;
+    std::shared_ptr<MockClient> client;
     NiceHashApi niceHashApi;
 
     void SetUp() {
-        this->client = new MockClient;
+        this->client = std::shared_ptr<MockClient>(new MockClient);
         niceHashApi = NiceHashApi(this->client);
-    }
-
-    void TearDown() {
-        delete(this->client);
     }
 };
 

@@ -1,13 +1,14 @@
 #pragma once
 
 #include <string>
+#include <memory>
 
 #include "client.hpp"
 
 
 class NiceHashApi {
 private:
-    Client* client;
+    std::shared_ptr<Client> client;
     void throwExceptionIfAlgorithmInvalid (int algorithm_id);
     void throwExceptionIfLocationInvalid (int location_id);
 public:
@@ -34,8 +35,8 @@ public:
 
     // Constructors
     NiceHashApi ()
-        : NiceHashApi(new Client) {};
-    NiceHashApi (Client* new_client) {
+        : NiceHashApi(std::shared_ptr<Client>(new Client)) {};
+    NiceHashApi (std::shared_ptr<Client> new_client) {
         this->client = new_client;
     };
 };
