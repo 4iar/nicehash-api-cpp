@@ -33,9 +33,8 @@ public:
     std::string getApiVersion ();
 
     // Constructors
-    NiceHashApi () {
-        this->client = new Client;
-    };
+    NiceHashApi ()
+        : NiceHashApi(new Client) {};
     NiceHashApi (Client* new_client) {
         this->client = new_client;
     };
