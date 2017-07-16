@@ -35,7 +35,7 @@ public:
 
     // Constructors
     NiceHashApi ()
-        : NiceHashApi(std::shared_ptr<Client>(new Client)) {};
+        : NiceHashApi(std::make_shared<Client>()) {};
     NiceHashApi (std::shared_ptr<Client> new_client) {
         this->client = new_client;
     };

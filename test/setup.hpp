@@ -10,7 +10,7 @@ public:
     NiceHashApi niceHashApi;
 
     void SetUp() {
-        this->client = std::shared_ptr<MockClient>(new MockClient);
+        this->client = std::make_shared<MockClient>();
         niceHashApi = NiceHashApi(this->client);
     }
 };
