@@ -1,6 +1,9 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
+using ::testing::AtLeast;
+using ::testing::Return;
+
 
 int main(int argc, char** argv) {
     // The following line must be executed to initialize Google Mock
@@ -8,3 +11,4 @@ int main(int argc, char** argv) {
     ::testing::InitGoogleMock(&argc, argv);
     return RUN_ALL_TESTS();
 }
+

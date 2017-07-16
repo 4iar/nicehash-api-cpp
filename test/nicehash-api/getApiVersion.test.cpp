@@ -1,24 +1,14 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include <memory>
 
-#include "../mocks/client.mock.hpp"
-#include "nicehash-api.hpp"
+#include "../setup.hpp"
 
 
 using ::testing::AtLeast;
 using ::testing::Return;
 
 
-class GetApiVersionTest : public ::testing::Test {
-public:
-    std::shared_ptr<MockClient> client;
-    NiceHashApi niceHashApi;
-
-    void SetUp() {
-        this->client = std::shared_ptr<MockClient>(new MockClient);
-        niceHashApi = NiceHashApi(this->client);
-    }
+class GetApiVersionTest : public TestSetUp {
 };
 
 TEST_F(GetApiVersionTest, GetsTheApiVersion) {
