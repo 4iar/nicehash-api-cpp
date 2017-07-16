@@ -3,7 +3,6 @@
 
 #include "../setup.hpp"
 
-using ::testing::AtLeast;
 using ::testing::Return;
 
 
