@@ -57,7 +57,7 @@ make doc
 
 ## API
 
-Official documentation @ [NiceHash.com](https://www.nicehash.com/?p=api)
+Official documentation @ [NiceHash.com](https://docs.nicehash.com/)
 
 ### Public
 
