@@ -117,7 +117,7 @@ or
 
 ##### multialgo.info
 
-Get information about Mult-Algorithm Mining.
+Get information about Multi-Algorithm Mining.
 
 ##### simplemultialgo.info
 
